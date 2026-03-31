@@ -90,6 +90,16 @@ export default function HeroSection() {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <motion.button
+                  onClick={() => {
+                    const userAgent = navigator.userAgent || navigator.vendor;
+                    if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+                      window.location.href = "https://apps.apple.com/in/app/oneinfo-ai-assistant/id6517354494";
+                    } else if (/android/i.test(userAgent)) {
+                      window.location.href = "https://play.google.com/store/apps/details?id=com.gadgetspidy.oneinfo";
+                    } else {
+                      window.location.href = "/download";
+                    }
+                  }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-primary/25"

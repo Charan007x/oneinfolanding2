@@ -102,7 +102,7 @@ export default function PricingSection() {
             viewport={{ once: true }}
             className="text-gray-400 text-sm md:text-base mt-4"
           >
-            Turn conversations into consistent revenue.
+            {/* Turn conversations into consistent revenue. */}
           </motion.p>
         </div>
 

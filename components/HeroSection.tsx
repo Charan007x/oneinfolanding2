@@ -33,18 +33,17 @@ export default function HeroSection() {
   return (
     <div className="relative min-h-screen">
       <Navbar />
-      {/* Hero container */}
-      <div className="relative h-screen w-full overflow-hidden">
-        <ParticleSystem />
+    <div className="relative min-h-screen lg:h-screen w-full overflow-x-hidden lg:overflow-visible flex flex-col pt-20 lg:pt-24">
+      <ParticleSystem />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row items-center lg:items-center justify-start lg:justify-center flex-1">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center w-full max-w-7xl mx-auto pb-10 lg:pb-0 pt-4 lg:pt-0">
             {/* Left Side - Copy */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="space-y-6 lg:space-y-8 z-10"
+              className="space-y-5 lg:space-y-8 z-10 lg:min-h-0 flex flex-col justify-start mt-6 lg:mt-0 lg:justify-center"
             >
               {/* Badge
               <motion.div
@@ -87,7 +86,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-row gap-3 sm:gap-4"
               >
                 <motion.button
                   onClick={() => {
@@ -102,11 +101,11 @@ export default function HeroSection() {
                   }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-primary/25"
+                  className="px-4 py-3 sm:px-8 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-primary/25 text-sm sm:text-base flex-1 sm:flex-none"
                 >
                   Start Automating
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 sm:w-5 sm:h-5 hidden xs:block"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -123,10 +122,10 @@ export default function HeroSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 glass hover:bg-white/10 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2 border border-white/20"
+                  className="px-4 py-3 sm:px-8 sm:py-4 glass hover:bg-white/10 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2 border border-white/20 text-sm sm:text-base flex-1 sm:flex-none"
                 >
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 sm:w-5 sm:h-5 hidden xs:block"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -153,7 +152,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="flex items-center gap-3 pt-8"
+                className="hidden lg:flex items-center gap-3 pt-8"
               >
                 <div className="flex items-center gap-2">
                   {[0, 1, 2].map((index) => (
@@ -176,12 +175,13 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Right Side - iPhone with Visual Flow */}
-            <div className="relative z-10 flex items-center justify-center">
+            <div className="relative z-10 flex items-center justify-center mt-6 lg:mt-0 pb-16 lg:pb-0">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9, x: 50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                className="transform scale-[0.85] lg:scale-[0.35] xl:scale-[0.40] origin-top lg:origin-center"
               >
                 <IPhoneFrame>
                 <AnimatePresence mode="wait">

@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import MobileLogoLoopSection from "@/components/MobileLogoLoopSection";
 import LogoLoopSection from "@/components/LogoLoopSection";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main className="relative overflow-hidden">
       <HeroSection />
+      <MobileLogoLoopSection />
       <StatsSection />
       <LogoLoopSection />
       <TestimonialsSection />

@@ -9,7 +9,6 @@ const mobileLogos = [
   { src: "/mobile-logos/image 142.png", alt: "Trustpilot", title: "Trustpilot" },
   { src: "/mobile-logos/image 144.png", alt: "Tie50", title: "Tie50 Hyderabad" },
   { src: "/mobile-logos/image 145.png", alt: "Meta Verified", title: "Meta Verified" },
-  { src: "/mobile-logos/image 140.png", alt: "Startup India", title: "Startup India" },
 ];
 
 export default function MobileLogoLoopSection() {

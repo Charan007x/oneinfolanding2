@@ -96,9 +96,9 @@ export default function AboutSection() {
             {team.map((member, idx) => (
               <div
                 key={idx}
-                className="bg-white/5 border border-white/10 rounded-xl flex flex-col sm:flex-row overflow-hidden hover:bg-white/10 hover:border-primary/30 transition-all duration-300 shadow-xl"
+                className="bg-[#111115] border border-white/5 rounded-2xl flex flex-row overflow-hidden hover:bg-white/5 hover:border-primary/30 transition-all duration-300 shadow-xl min-h-[140px] md:min-h-[160px]"
               >
-                <div className="sm:w-[140px] md:w-[160px] shrink-0 relative min-h-[180px] bg-white/5 flex items-center justify-center">
+                <div className="w-[100px] sm:w-[140px] md:w-[160px] shrink-0 relative bg-white/5 flex items-center justify-center">
                   <span className="text-white/20 font-bold text-4xl uppercase">{member.name.charAt(0)}</span>
                   {/* Standard img tag used to avoid Next.js Image caching crash on missing file */}
                   <img
@@ -110,10 +110,10 @@ export default function AboutSection() {
                     }}
                   />
                 </div>
-                <div className="p-6 flex flex-col justify-center">
-                  <h4 className="text-white font-bold text-sm md:text-base mb-1">{member.name}</h4>
-                  <p className="text-[#a855f7] text-xs font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
+                <div className="p-4 md:p-6 flex flex-col justify-center flex-1">
+                  <h4 className="text-white font-bold text-[13px] sm:text-sm md:text-base mb-1 uppercase tracking-wide">{member.name}</h4>
+                  <p className="text-[#a855f7] text-[11px] sm:text-xs font-semibold mb-2">{member.role}</p>
+                  <p className="text-gray-400 text-[11px] sm:text-xs md:text-sm leading-relaxed">
                     {member.description}
                   </p>
                 </div>

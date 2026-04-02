@@ -10,14 +10,14 @@ export default function ParticleSystem() {
     offset: ["start start", "end end"],
   });
 
-  // Create particles with random positions
+  // Create particles with a seed or stable logic to avoid hydration mismatches
   const particles = Array.from({ length: 30 }, (_, i) => ({
     id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 4 + 1,
-    delay: Math.random() * 2,
-    duration: Math.random() * 3 + 2,
+    x: ((i * 137) % 100), // Stable pseudo-random
+    y: ((i * 251) % 100),
+    size: ((i * 3) % 4) + 1,
+    delay: ((i * 7) % 20) / 10,
+    duration: ((i * 11) % 30) / 10 + 2,
   }));
 
   return (

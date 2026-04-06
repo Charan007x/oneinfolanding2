@@ -6,7 +6,7 @@ export default function FooterSection() {
   return (
     <footer className="relative bg-[#09090b] pt-16 lg:pt-24 pb-8 z-10 border-t border-white/5">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
+        <div className="flex flex-col-reverse lg:flex-row justify-between gap-16 lg:gap-24">
           
           {/* Left Column - Brand Info */}
           <div className="flex-1 lg:max-w-xl">

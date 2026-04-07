@@ -18,11 +18,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <svg className="w-6 h-6 text-white relative z-10" viewBox="0 0 32 32" fill="none" stroke="currentColor">
-              <circle cx="12" cy="16" r="9" strokeWidth="2.5" />
-              <circle cx="12" cy="16" r="4" strokeWidth="2" />
-              <rect x="25" y="7" width="2.5" height="18" fill="currentColor" stroke="none" />
-            </svg>
+            <img src="/logos/oilogo.svg" alt="OneInfo.ai Logo" className="w-8 h-8 relative z-10 object-contain" />
             <span className="text-base font-bold tracking-[0.10em] text-white">ONEINFO.AI</span>
           </Link>
 

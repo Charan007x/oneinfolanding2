@@ -12,11 +12,7 @@ export default function FooterSection() {
           <div className="flex-1 lg:max-w-xl">
             {/* Logo */}
             <div className="flex items-center gap-3 mb-8">
-              <svg className="w-10 h-10 text-white" viewBox="0 0 32 32" fill="none" stroke="currentColor">
-                <circle cx="12" cy="16" r="9" strokeWidth="2.5" />
-                <circle cx="12" cy="16" r="4" strokeWidth="2" />
-                <rect x="25" y="7" width="2.5" height="18" fill="currentColor" stroke="none" />
-              </svg>
+              <img src="/logos/oilogo.svg" alt="OneInfo.ai Logo" className="w-10 h-10 object-contain text-white relative z-10" />
               <span className="text-xl font-bold tracking-[0.15em] text-white">ONEINFO.AI</span>
             </div>
 
@@ -145,8 +141,17 @@ export default function FooterSection() {
           </div>
         </div>
 
+        {/* Trusted Partners / Logos */}
+        <div className="mt-20 hidden md:flex flex-wrap justify-center lg:justify-between items-center gap-10 opacity-70">
+          <img src="/mobile-logos/image 140.png" alt="Partner Logo 1" className="h-8 md:h-12 object-contain" />
+          <img src="/mobile-logos/image 141.png" alt="Partner Logo 2" className="h-8 md:h-12 object-contain" />
+          <img src="/mobile-logos/image 142.png" alt="Partner Logo 3" className="h-8 md:h-12 object-contain" />
+          <img src="/mobile-logos/image 144.png" alt="Partner Logo 4" className="h-8 md:h-12 object-contain" />
+          <img src="/mobile-logos/image 145.png" alt="Partner Logo 5" className="h-8 md:h-12 object-contain" />
+        </div>
+
         {/* Copyright */}
-        <div className="mt-20 pt-8 border-t border-white/5 text-center">
+        <div className="mt-16 pt-8 border-t border-white/5 text-center">
           <p className="text-gray-500 text-xs">
             © 2026 OneInfo.ai — All Rights Reserved
           </p>

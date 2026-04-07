@@ -5,6 +5,7 @@ import StatsSection from "@/components/StatsSection";
 import StackSection from "@/components/StackSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
+import ComparisonSection from "@/components/ComparisonSection";
 import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <TestimonialsSection />
       <PricingSection />
       <AboutSection />
+      <ComparisonSection />
       <FAQSection />
       <FooterSection />
     </main>

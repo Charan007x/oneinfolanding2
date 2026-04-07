@@ -2,58 +2,97 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { Bebas_Neue, Roboto } from 'next/font/google';
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
+
+type GalleryItem = {
+  id: number;
+  title: string;
+  description: string;
+  isComingSoon?: boolean;
+  icon?: string; // Path to the icon image
+};
 
 // 10 Items to perfectly form 5 pairs
-const galleryItems = [
+const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    title: "Empowering Creators",
-    description: "Provide the ultimate toolkit for creators to manage, monetize, and scale their audience interactively."
+    title: "Affiliated Store",
+    description: "Earn commissions by connecting with top affiliated brands seamlessly.",
+    isComingSoon: false,
+    icon: "/icons/store.svg" // Replace with your actual icon path
   },
   {
     id: 2,
-    title: "AI Interactions",
-    description: "Automate your DMs and engagement using personalized AI trained precisely on your brand voice."
+    title: "BRAND COLLABS",
+    description: "AI - Matched brand partnership sent directly to you",
+    isComingSoon: false,
+    icon: "/icons/collab.svg"
   },
   {
     id: 3,
-    title: "Brand Collaborations",
-    description: "Easily connect with top-tier brands and manage sponsorships natively within our seamless dashboard."
+    title: "Priority DM",
+    description: "High-value leads get instant priority responses.",
+    isComingSoon: false,
+    icon: "/icons/dm.svg"
   },
   {
     id: 4,
-    title: "Advanced Analytics",
-    description: "Track your growth, understand your audience, and optimize your strategy with real-time insights."
+    title: "AI HASHTAGS",
+    description: "Auto-generate trending hashtags for maximum reach.",
+    isComingSoon: false,
+    icon: "/icons/hash.svg"
   },
   {
     id: 5,
-    title: "Automated Workflows",
-    description: "Save time by automating repetitive tasks and focusing on what matters most: creating content."
+    title: "SCHEDULING",
+    description: "Schedule reels and posts at peak engagement times. Your content goes live automatically — no manual work needed.",
+    isComingSoon: false,
+    icon: "/icons/schedule.svg"
   },
   {
     id: 6,
-    title: "Global Reach",
-    description: "Expand your audience globally with multi-language support and international payment processing."
+    title: "AUTO DM",
+    description: "Instantly reply to every comment with AI-powered personalized DMs.",
+    isComingSoon: false,
+    icon: "/icons/autodm.svg"
   },
   {
     id: 7,
-    title: "Instant Payouts",
-    description: "Get paid faster with our instant payout system, ensuring you always have access to your funds."
+    title: "ANALYTICS",
+    description: "Track growth, conversions, and campaign performance.",
+    isComingSoon: false,
+    icon: "/icons/analytics.svg"
   },
   {
     id: 8,
-    title: "Custom Integrations",
-    description: "Connect your favorite tools and platforms seamlessly with our extensive API and webhooks."
+    title: "AI SCRIPTING",
+    description: "Auto-generate viral scripts and captions.",
+    isComingSoon: true,
+    icon: "/icons/aiscr.svg"
   },
   {
     id: 9,
-    title: "Secure Vault",
-    description: "Keep your data and your audience's data safe with enterprise-grade security and encryption."
+    title: "TREND DETECTION",
+    description: "Spot viral trends before they peak.",
+    isComingSoon: true,
+    icon: "/icons/trend.svg"
   },
   {
     id: 10,
-    title: "Community Hub",
-    description: "Foster a loyal community with dedicated spaces for your fans to interact and engage."
+    title: "VIDEO EDITING",
+    description: "AI-assisted editing for Reels and Shorts.",
+    isComingSoon: true,
+    icon: "/icons/video.svg"
   }
 ];
 
@@ -64,7 +103,7 @@ function ScrollText({
   scrollProgress,
   isRight = false
 }: { 
-  item: typeof galleryItems[0], 
+  item: GalleryItem, 
   index: number, 
   scrollProgress: MotionValue<number>;
   isRight?: boolean;
@@ -79,12 +118,31 @@ function ScrollText({
 
   return (
     <motion.div 
-      className={`absolute inset-x-0 w-full px-8 md:px-16 ${isRight ? 'text-right' : 'text-left'}`}
+      className={`absolute inset-x-0 w-full px-4 md:px-12 flex ${isRight ? 'flex-row-reverse' : 'flex-row'} items-center gap-4 md:gap-5`}
       style={{ opacity, y, willChange: "transform, opacity" }}
     >
-        <span className="text-primary text-sm font-bold tracking-widest uppercase mb-3 block">Feature {item.id < 10 ? `0${item.id}` : item.id}</span>
-        <h2 className="text-3xl lg:text-5xl font-bold mb-4 leading-tight">{item.title}</h2>
-        <p className={`text-gray-300 text-lg leading-relaxed max-w-md ${isRight ? 'ml-auto' : 'mr-auto'}`}>{item.description}</p>
+      {/* Icon Box */}
+      <div className="flex-shrink-0 flex items-center justify-center overflow-hidden">
+        {item.icon && (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img src={item.icon} alt={item.title} className="w-20 h-20 md:w-32 md:h-32 object-contain opacity-90" />
+        )}
+      </div>
+
+      {/* Text Area */}
+      <div className={`flex flex-col ${isRight ? 'text-right' : 'text-left'}`}>
+        {item.isComingSoon && (
+          <span className={`${roboto.className} text-[#a57bd0] border border-[#a57bd0] rounded-full px-3 py-1 text-[11px] font-bold tracking-widest uppercase mb-3 w-fit ${isRight ? 'ml-auto' : 'mr-auto'}`}>
+            Coming Soon
+          </span>
+        )}
+        <h2 className={`${bebasNeue.className} text-4xl md:text-5xl lg:text-6xl mb-3 leading-none uppercase tracking-wide text-white`}>
+          {item.title}
+        </h2>
+        <p className={`${roboto.className} text-gray-400 text-base md:text-lg font-normal leading-relaxed max-w-sm ${isRight ? 'ml-auto' : 'mr-auto'}`}>
+          {item.description}
+        </p>
+      </div>
     </motion.div>
   );
 }
@@ -115,13 +173,13 @@ export default function StackSection() {
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden w-full mx-auto">
         
         {/* Header - Fixed at the top of the sticky container */}
-        <div className="absolute top-12 lg:top-24 w-full px-4 text-center z-20">
+        <div className="absolute top-32 md:top-24 lg:top-32 w-full px-4 text-center z-20">
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-sm text-gray-400 uppercase tracking-wider mb-3"
+            className={`${roboto.className} text-sm font-medium text-gray-400 uppercase tracking-wider mb-3`}
           >
             Our Features
           </motion.p>
@@ -130,15 +188,15 @@ export default function StackSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-3xl lg:text-4xl font-bold text-white max-w-2xl mx-auto"
+            className={`${bebasNeue.className} text-4xl lg:text-6xl tracking-wide text-white max-w-2xl mx-auto`}
           >
             Discover What&apos;s <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Possible</span>
           </motion.h2>
         </div>
 
-        <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center pt-24 lg:pt-32">
+        <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center pt-24 md:pt-32 lg:pt-40">
           {/* Left Side: Animated Context Text */}
-          <div className="w-full md:w-1/2 flex items-center relative h-[40vh] md:h-auto min-h-[300px]">
+          <div className="w-full md:w-1/2 flex items-center relative h-[21vh] md:h-[40vh] lg:h-auto min-h-[170px] md:min-h-[300px]">
              {contentPairs.map((pair, i) => (
                <ScrollText 
                  key={`left-${pair.left.id}`} 
@@ -150,7 +208,7 @@ export default function StackSection() {
           </div>
           
           {/* Right Side: Animated Context Text (Opposite Effect) */}
-          <div className="w-full md:w-1/2 flex items-center relative h-[40vh] md:h-auto min-h-[300px]">
+          <div className="w-full md:w-1/2 flex items-center relative h-[21vh] md:h-[40vh] lg:h-auto min-h-[170px] md:min-h-[300px]">
             {contentPairs.map((pair, i) => (
               pair.right && (
                 <ScrollText 

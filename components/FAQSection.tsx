@@ -2,6 +2,17 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Bebas_Neue, Roboto } from 'next/font/google';
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
 
 const faqs = [
   {
@@ -34,7 +45,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="relative py-12 lg:py-24 overflow-hidden z-10">
+    <section id="faq" className="relative py-8 lg:py-16 overflow-hidden z-10">
       <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <div className="mb-10 lg:mb-14 text-center">
           <motion.p
@@ -51,9 +62,10 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-2xl lg:text-4xl font-bold text-white tracking-tight"
+            className={`${bebasNeue.className} text-[30px] md:text-[36px] tracking-wide text-center uppercase`}
           >
-            Frequently <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Asked Questions</span>
+            <span className="text-white">Frequently </span>
+            <span className="text-[#b48cfa]">Asked Questions</span>
           </motion.h2>
         </div>
 
@@ -73,21 +85,21 @@ export default function FAQSection() {
                   onClick={() => toggleOpen(index)}
                   className="w-full flex items-center justify-between py-6 text-left focus:outline-none group"
                 >
-                  <span className="text-gray-300 font-medium group-hover:text-white transition-colors duration-200">
+                  <span className={`${roboto.className} text-[#E4E4E6] text-[16px] lg:text-[18px] font-medium group-hover:text-white transition-colors duration-200`}>
                     {faq.question}
                   </span>
                   <div 
-                    className={`ml-4 shrink-0 w-7 h-7 rounded-full border border-white/10 flex items-center justify-center transition-all duration-300 ${
-                      isOpen ? "bg-white/10 rotate-180" : "bg-transparent group-hover:border-white/30"
+                    className={`ml-4 shrink-0 w-8 h-8 rounded-full border border-[#1A1A24] flex items-center justify-center transition-all duration-300 ${
+                      isOpen ? "bg-[#1A1A24]" : "bg-transparent group-hover:border-white/20"
                     }`}
                   >
                     <svg 
-                      className="w-3.5 h-3.5 text-gray-400 group-hover:text-white transition-colors" 
+                      className={`w-4 h-4 text-gray-400 group-hover:text-white transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
                       fill="none" 
                       viewBox="0 0 24 24" 
                       stroke="currentColor"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
                 </button>
@@ -101,7 +113,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <p className="text-gray-400 pb-6 pr-12 text-sm leading-relaxed">
+                      <p className={`${roboto.className} text-[#818898] pb-6 pr-12 text-[14px] lg:text-[15px] leading-relaxed`}>
                         {faq.answer}
                       </p>
                     </motion.div>

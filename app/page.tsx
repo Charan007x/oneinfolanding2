@@ -1,8 +1,8 @@
 import HeroSection from "@/components/HeroSection";
-import MobileLogoLoopSection from "@/components/MobileLogoLoopSection";
-import LogoLoopSection from "@/components/LogoLoopSection";
+import PartnerLogoLoopSection from "@/components/PartnerLogoLoopSection";
+import BrandsSection from "@/components/BrandsSection";
 import StatsSection from "@/components/StatsSection";
-import StackSection from "@/components/StackSection";
+import FeaturesSection from "@/components/FeaturesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
 import ComparisonSection from "@/components/ComparisonSection";
@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <main className="relative">
       <HeroSection />
-      <MobileLogoLoopSection />
+      <PartnerLogoLoopSection />
       <StatsSection />
-      <StackSection />
-      <LogoLoopSection />
+      <FeaturesSection />
+      <BrandsSection />
       <TestimonialsSection />
       <PricingSection />
       <AboutSection />

@@ -4,18 +4,19 @@ import { motion } from "framer-motion";
 import LogoLoop from "./LogoLoop";
 
 const brandLogos = [
-  { src: "/logos/amazon.png", alt: "Amazon", title: "Amazon" },
-  { src: "/logos/flipkart.png", alt: "Flipkart", title: "Flipkart" },
+  { src: "/logos/amazon2.png", alt: "Amazon", title: "Amazon" },
+  { src: "/logos/flipkart2.png", alt: "Flipkart", title: "Flipkart" },
   { src: "/logos/meesho.png", alt: "Meesho", title: "Meesho" },
   { src: "/logos/myntra.png", alt: "Myntra", title: "Myntra" },
   { src: "/logos/nykaa.svg", alt: "Nykaa", title: "Nykaa" },
   { src: "/logos/plum.png", alt: "Plum", title: "Plum Goodness" },
   { src: "/logos/shopsy.png", alt: "Shopsy", title: "Shopsy" },
+  { src: "/logos/ajio.png", alt: "AJIO", title: "AJIO" },
 ];
 
 export default function LogoLoopSection() {
   return (
-    <section className="relative py-16 lg:py-20 overflow-hidden">
+    <section className="relative py-8 lg:py-10 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
 

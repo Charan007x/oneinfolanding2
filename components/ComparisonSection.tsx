@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Bebas_Neue, Roboto } from 'next/font/google';
@@ -13,109 +13,93 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
-const oldWayItems = [
-  "Miss hundreds of DMs daily while you sleep",
-  "Manually reply to every comment and question",
-  "Lose leads because response was too slow",
-  "Spend hours finding and applying to brand deals",
-  "No analytics — guessing what content works",
-  "Affiliate links shared manually, inconsistently",
-  "Burnout from doing everything yourself",
-];
-
-const newWayItems = [
-  "AI replies to every DM instantly, 24/7",
-  "Smart auto-comments with keyword triggers",
-  "Zero response lag — capture every lead",
-  "AI matches and delivers brand deals to you",
-  "Real-time analytics on every post and campaign",
-  "Affiliate links auto-sent in personalized DMs",
-  "Full creator OS — focus on creativity, AI handles the rest",
+const comparisonData = [
+  { old: "Miss DMs while you sleep", new: "AI replies 24/7, zero lag" },
+  { old: "Manually reply to every comment", new: "Auto-comments with smart triggers" },      
+  { old: "Lose leads to slow responses", new: "Every lead captured instantly" },
+  { old: "Chase brand deals yourself", new: "Brand deals delivered to you" },
+  { old: "No idea what content works", new: "Real-time analytics on everything" },
+  { old: "Share affiliate links manually", new: "Affiliate links sent automatically" },      
+  { old: "Burn out doing everything alone", new: "Full autopilot — you just create" },       
 ];
 
 export default function ComparisonSection() {
   return (
-    <section className="hidden md:block relative w-full py-12 lg:py-24 overflow-hidden z-10">
-      <div className="container mx-auto px-4 max-w-6xl relative z-10 flex flex-col items-center justify-center">
-        <div className="w-full flex flex-col items-center gap-12">
-          
-          {/* Header */}
-          <div className="mb-8 lg:mb-12 text-center flex flex-col items-center gap-3">
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-sm text-gray-400 uppercase tracking-wider"
-            >
-              Why OneInfo
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-2xl lg:text-4xl font-bold text-white tracking-tight"
-            >
-              CHAOS VS THE <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">ONEINFO WAY</span>
-            </motion.h2>
-          </div>
+    <section className="relative w-full py-8 lg:py-16 overflow-hidden z-10">
+      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
 
-          {/* Content */}
-        <div className="flex flex-col lg:flex-row w-full gap-8">
-          
-          {/* Old Way Column */}
-          <motion.div 
+        {/* Header */}
+        <div className="mb-8 md:mb-12 text-center flex flex-col items-center">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex-1 w-full p-8 md:p-12 rounded-3xl border border-red-500/10 bg-red-500/5 flex flex-col gap-8 shadow-lg"
+            className={`${bebasNeue.className} text-[30px] md:text-[36px] tracking-wide`}    
           >
-            <h3 className={`${bebasNeue.className} text-white text-3xl tracking-[1.54px]`}>
-              ✕ The Old Way
-            </h3>
-            <div className="flex flex-col gap-6">
-              {oldWayItems.map((item, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="w-7 h-7 shrink-0 rounded-full bg-red-500/20 flex items-center justify-center mt-0.5 shadow-[0_0_10px_rgba(239,68,68,0.2)]">
-                    <span className={`${roboto.className} text-red-400 text-xs font-bold leading-none`}>✗</span>
-                  </div>
-                  <p className={`${roboto.className} text-gray-300 text-base leading-relaxed`}>
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* New Way Column */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex-1 w-full p-8 md:p-12 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 to-primary/5 flex flex-col gap-8 shadow-xl shadow-primary/5"
-          >
-            <h3 className={`${bebasNeue.className} text-white text-3xl tracking-[1.54px]`}>
-              ✓ The OneInfo Way
-            </h3>
-            <div className="flex flex-col gap-6">
-              {newWayItems.map((item, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="w-7 h-7 shrink-0 rounded-full bg-primary/20 flex items-center justify-center mt-0.5 shadow-[0_0_10px_rgba(168,85,247,0.2)]">
-                    <span className={`${roboto.className} text-primary text-xs font-bold leading-none`}>✓</span>
-                  </div>
-                  <p className={`${roboto.className} text-gray-300 text-base leading-relaxed`}>
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
+            <span className="text-white lg:text-[#F0F1F5] uppercase">Stop doing it the </span>
+            <span className="text-[#9F7CFF] uppercase">hard way.</span>
+          </motion.h2>
         </div>
-      </div>
+
+        {/* Content */}
+        <div className="w-full max-w-[768px] mx-auto">
+          <div className="flex flex-col gap-4">
+
+            {/* Column Headers */}
+            <div className="grid grid-cols-2 gap-x-4 md:gap-x-8 mb-2">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className={`${bebasNeue.className} text-center uppercase tracking-widest text-[#818898] text-[14px]`}
+              >
+                Without OneInfo
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className={`${bebasNeue.className} text-center uppercase tracking-widest text-[#7847EB] text-[14px]`}
+              >
+                With OneInfo
+              </motion.div>
+            </div>
+
+            {/* Rows */}
+            <div className="flex flex-col gap-4">
+              {comparisonData.map((row, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="grid grid-cols-2 gap-x-4 md:gap-x-8"
+                >
+                  {/* Left Card */}
+                  <div className="min-h-[54px] w-full flex items-center gap-3 p-3 md:p-4 rounded-xl border border-[#2B2E3B] bg-[#0A0A0A]">
+                    <span className={`${roboto.className} text-[#EF4343] text-[14px] shrink-0 font-bold`}>✗</span>
+                    <span className={`${roboto.className} text-[#818898] text-[12px] md:text-[14px] leading-tight`}>
+                      {row.old}
+                    </span>
+                  </div>
+
+                  {/* Right Card */}
+                  <div className="min-h-[54px] w-full flex items-center gap-3 p-3 md:p-4 rounded-xl border border-[#2B2E3B] shadow-[0_0_20px_rgba(120,71,235,0.10)] bg-[#0A0A0A]">        
+                    <span className={`${roboto.className} text-[#7847EB] text-[14px] shrink-0 font-bold`}>✓</span>
+                    <span className={`${roboto.className} text-[#F0F1F5] text-[12px] md:text-[14px] leading-tight`}>
+                      {row.new}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

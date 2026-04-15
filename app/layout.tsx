@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "OneInfo.ai - Turn Comments into Revenue",
+  title: "OneInfo.ai - YOUR AI Assistant for creators and business.",
   description: "AI responds to your audience, shares product links, and drives sales on autopilot.",
 };
 
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased bg-gradient-to-b from-obsidian via-obsidian to-black min-h-screen`}>
+      <body className={`${roboto.className} antialiased bg-[#0A0A0A] min-h-screen`}>
         {children}
       </body>
     </html>

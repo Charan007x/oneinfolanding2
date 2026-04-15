@@ -2,6 +2,12 @@
 
 import { motion } from "framer-motion";
 import CountUp from "./CountUp";
+import { Bebas_Neue } from 'next/font/google';
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function StatsSection() {
   const stats = [
@@ -11,14 +17,14 @@ export default function StatsSection() {
       label: "Creators",
     },
     {
-      count: 1,
+      count: 10,
       suffix: "M+",
       label: "AI Interactions",
     },
     {
-      count: 150,
-      suffix: "+",
-      label: "Affiliated Brands",
+      count: 132,
+      suffix: "",
+      label: "Brands",
     },
     {
       count: 50,
@@ -49,9 +55,9 @@ export default function StatsSection() {
   };
 
   return (
-    <section id="features" className="relative py-12 lg:py-16 overflow-hidden">
+    <section id="features" className="relative py-8 lg:py-10 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
+      <div className="absolute inset-0 bg-transparent pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -70,9 +76,10 @@ export default function StatsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-2xl lg:text-3xl font-bold text-white"
+            className={`${bebasNeue.className} text-[30px] md:text-[36px] tracking-wide text-center uppercase`}
           >
-            Growing By The <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Numbers</span>
+            <span className="text-white">Growing By The </span>
+            <span className="text-[#b48cfa]">Numbers</span>
           </motion.h2>
         </div>
 
@@ -89,27 +96,26 @@ export default function StatsSection() {
               key={index}
               variants={itemVariants}
               className="relative"
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
               {/* Card content */}
-              <div className="rounded-xl p-6 lg:p-8 border border-white/5 bg-white/2 text-center transition-all duration-300 hover:border-primary/30 hover:bg-white/5">
+              <div className="rounded-xl p-5 lg:p-6 bg-[#13111A] border border-white/5 text-center flex flex-col items-center justify-center min-h-[120px]">
                 {/* Count */}
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <div className="flex items-baseline justify-center gap-[2px] mb-2">
+                  <span className="text-2xl lg:text-[28px] font-bold text-[#b48cfa] leading-none">
                     <CountUp
                       to={stat.count}
                       duration={2.5}
                       separator=","
                       className="inline-block"
                     />
-                  </span>
-                  <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    {stat.suffix}
+                    {stat.suffix && (
+                      <span>{stat.suffix}</span>
+                    )}
                   </span>
                 </div>
 
                 {/* Label */}
-                <p className="text-gray-400 text-sm lg:text-base mt-4">
+                <p className="text-[#84828a] text-[10px] lg:text-[11px] font-medium tracking-[0.02em]">
                   {stat.label}
                 </p>
               </div>

@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import LogoLoop from "./LogoLoop";
+import { Bebas_Neue, Roboto } from "next/font/google";
+
+const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
+const roboto = Roboto({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 // --- MOBILE COMPONENT & DATA ---
 
@@ -87,7 +91,7 @@ const MobileTestimonialCard = ({ testimonial }: { testimonial: any }) => (
         <span className="text-[#FBBF24] text-[13px] md:text-[15px] tracking-[3px]">★★★★★</span>
       </div>
       
-      <p className="text-white/80 text-[14px] md:text-[16px] font-normal leading-relaxed md:leading-[1.7] mb-8 text-left font-sans">
+      <p className={`text-white/80 text-[14px] font-normal leading-relaxed md:leading-[1.7] mb-8 text-left ${roboto.className}`}>
         "{testimonial.quote}"
       </p>
       
@@ -259,7 +263,7 @@ const DesktopTestimonialCard = ({ testimonial }: { testimonial: any }) => (
         </div>
       </div>
       <div className="flex flex-col justify-start items-start w-full">
-        <div className="text-white/80 text-[14px] font-sans leading-relaxed">
+        <div className={`text-white/80 text-[14px] leading-relaxed ${roboto.className}`}>
           "{testimonial.quote}"
         </div>
       </div>
@@ -435,7 +439,7 @@ export default function TestimonialsSection() {
   }));
 
   return (
-    <section id="testimonials" className="relative py-12 lg:py-16 overflow-hidden">
+    <section id="testimonials" className="relative py-8 lg:py-10 overflow-hidden">
       <div className="container mx-auto relative z-10 px-0 md:px-4">
         <div className="text-center mb-12">
           <motion.p
@@ -452,7 +456,7 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-2xl lg:text-3xl font-bold text-white relative flex items-center justify-center gap-2"
+            className={`text-[36px] font-bold text-white relative flex items-center justify-center gap-2 ${bebasNeue.className}`}
           >
            Loved By <span className="text-[#a855f7] bg-clip-text">Creators</span>
           </motion.h2>

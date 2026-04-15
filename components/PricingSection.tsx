@@ -1,7 +1,18 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import LogoLoop from "./LogoLoop";
+import { Bebas_Neue, Roboto } from 'next/font/google';
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
 
 const features = [
   "Unlimited DMs & Auto Replies",
@@ -28,22 +39,22 @@ const CheckIcon = ({ className = "" }: { className?: string }) => (
 export default function PricingSection() {
   const topFeatures = features.slice(0, 4).map((feature) => ({
     node: (
-      <div className="flex items-center gap-3 border border-white/5 bg-white/2 rounded-full px-6 py-3 transition-colors hover:border-primary/30 hover:bg-white/5 mx-2 w-max">
-        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/20 shrink-0">
-          <CheckIcon className="w-3.5 h-3.5 text-primary shrink-0" />
+      <div className="flex items-center gap-3 border border-[#2B2E3B] bg-[#0A0A0A] rounded-full px-6 py-3 transition-colors hover:border-[#9F7CFF] hover:bg-[#0A0A0A]/80 mx-2 w-max">
+        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-[#9F7CFF]/20 shrink-0">
+          <CheckIcon className="w-3.5 h-3.5 text-[#9F7CFF] shrink-0" />
         </div>
-        <span className="text-sm md:text-base text-gray-300 font-medium whitespace-nowrap">{feature}</span>
+        <span className={`${roboto.className} text-[#818898] text-[20px] whitespace-nowrap`}>{feature}</span>
       </div>
     )
   }));
 
   const bottomFeatures = features.slice(4, 8).map((feature) => ({
     node: (
-      <div className="flex items-center gap-3 border border-white/5 bg-white/2 rounded-full px-6 py-3 transition-colors hover:border-primary/30 hover:bg-white/5 mx-2 w-max">
-        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/20 shrink-0">
-          <CheckIcon className="w-3.5 h-3.5 text-primary shrink-0" />
+      <div className="flex items-center gap-3 border border-[#2B2E3B] bg-[#0A0A0A] rounded-full px-6 py-3 transition-colors hover:border-[#9F7CFF] hover:bg-[#0A0A0A]/80 mx-2 w-max">
+        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-[#9F7CFF]/20 shrink-0">
+          <CheckIcon className="w-3.5 h-3.5 text-[#9F7CFF] shrink-0" />
         </div>
-        <span className="text-sm md:text-base text-gray-300 font-medium whitespace-nowrap">{feature}</span>
+        <span className={`${roboto.className} text-[#818898] text-[20px] whitespace-nowrap`}>{feature}</span>
       </div>
     )
   }));
@@ -70,40 +81,23 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="relative py-12 lg:py-24 overflow-hidden">
+    <section id="pricing" className="relative py-8 lg:py-16 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-transparent pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10 max-w-6xl">
         {/* Header */}
-        <div className="text-center mb-12">
-          <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-sm text-gray-400 uppercase tracking-wider mb-3"
-          >
-            Pricing
-          </motion.p>
+        <div className="text-center mb-12 flex flex-col items-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-2xl lg:text-4xl font-bold text-white tracking-tight"
+            className={`${bebasNeue.className} text-[30px] md:text-[36px] tracking-wide text-center`}
           >
-            Monetize Your Audience. <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Scale Without Limits.</span>
+            <span className="text-white uppercase">Monetize Your Audience. </span>
+            <span className="text-[#9F7CFF] uppercase">Scale Without Limits.</span>
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-gray-400 text-sm md:text-base mt-4"
-          >
-            {/* Turn conversations into consistent revenue. */}
-          </motion.p>
         </div>
 
         {/* Features Scroll */}
@@ -152,51 +146,51 @@ export default function PricingSection() {
         >
           {/* Starter Card */}
           <motion.div variants={itemVariants} className="relative transition-all duration-300 hover:-translate-y-2">
-            <div className="h-full rounded-2xl p-8 border border-white/5 bg-white/2 flex flex-col items-center hover:border-primary/30 hover:bg-white/5 transition-all">
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-4 text-white">Starter</h3>
-              <p className="text-gray-400 text-xs uppercase tracking-widest mb-6">1 Month</p>
-              <div className="text-4xl lg:text-5xl font-bold mb-2 flex items-start text-white">
-                <span className="text-2xl mt-1">&#8377;</span>299
+            <div className="h-full rounded-2xl p-8 border border-[#2B2E3B] bg-[#0A0A0A] flex flex-col items-center hover:border-[#9F7CFF] transition-all">
+              <h3 className={`${bebasNeue.className} text-[36px] tracking-wide text-white uppercase mb-2`}>Starter</h3>
+              <p className={`${roboto.className} text-[#818898] text-[20px] mb-6`}>1 Month</p>
+              <div className={`${bebasNeue.className} text-[48px] text-white flex items-start mb-2`}>
+                <span className="text-[28px] mt-2">&#8377;</span>299
               </div>
-              <p className="text-primary text-sm font-medium mb-8">&#8377;10/day</p>
-              <p className="text-gray-400 text-sm mb-8 flex-grow">Unlimited All Features</p>
-              <button className="w-full py-3 px-6 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-sm font-semibold hover:bg-white/10 transition-colors">
-                Start Free Trial
+              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;10/day</p>
+              <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
+              <button className={`${roboto.className} w-full py-3 px-6 rounded-xl border border-[#2B2E3B] bg-[#0b0b0f] text-white text-[20px] font-medium hover:bg-[#1a1a24] transition-colors`}>
+                START FREE TRIAL
               </button>
             </div>
           </motion.div>
 
           {/* Growth Card - Highlighted */}
           <motion.div variants={itemVariants} className="relative transition-all duration-300 hover:-translate-y-2 mt-8 md:mt-0 md:-translate-y-4">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg whitespace-nowrap z-10">
+            <div className={`${roboto.className} absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#9F7CFF] text-white px-4 py-1.5 rounded-full text-[14px] font-medium tracking-wide whitespace-nowrap z-10`}>
               Limited Time
             </div>
-            <div className="h-full rounded-2xl p-8 border border-primary/50 bg-white/5 flex flex-col items-center shadow-[0_0_40px_-10px_rgba(124,58,237,0.2)]">
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-4 mt-2 text-white">Growth</h3>
-              <p className="text-gray-400 text-xs uppercase tracking-widest mb-6">3 Months</p>
-              <div className="text-4xl lg:text-5xl font-bold mb-2 flex items-start text-white">
-                <span className="text-2xl mt-1">&#8377;</span>599
+            <div className="h-full rounded-2xl p-8 border border-[#9F7CFF] bg-[#0A0A0A] flex flex-col items-center shadow-[0_0_40px_-10px_rgba(159,124,255,0.3)]">
+              <h3 className={`${bebasNeue.className} text-[36px] tracking-wide text-[#9F7CFF] uppercase mb-2 mt-2`}>Growth</h3>
+              <p className={`${roboto.className} text-[#818898] text-[20px] mb-6`}>3 Months</p>
+              <div className={`${bebasNeue.className} text-[48px] text-white flex items-start mb-2`}>
+                <span className="text-[28px] mt-2">&#8377;</span>599
               </div>
-              <p className="text-primary text-sm font-medium mb-8">&#8377;6.7/day</p>
-              <p className="text-gray-400 text-sm mb-8 flex-grow">Unlimited All Features</p>
-              <button className="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-primary to-secondary text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg">
-                Get Early Access
+              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;6.7/day</p>
+              <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
+              <button className={`${roboto.className} w-full py-3 px-6 rounded-xl bg-[#9F7CFF] text-white text-[20px] font-medium hover:opacity-90 transition-opacity shadow-lg`}>
+                GET EARLY ACCESS
               </button>
             </div>
           </motion.div>
 
           {/* Pro Yearly Card */}
           <motion.div variants={itemVariants} className="relative transition-all duration-300 hover:-translate-y-2 mt-8 md:mt-0">
-            <div className="h-full rounded-2xl p-8 border border-white/5 bg-white/2 flex flex-col items-center hover:border-primary/30 hover:bg-white/5 transition-all">
-              <h3 className="text-lg font-bold uppercase tracking-wider mb-4 text-white">Pro Yearly</h3>
-              <p className="text-gray-400 text-xs uppercase tracking-widest mb-6">12 Months</p>
-              <div className="text-4xl lg:text-5xl font-bold mb-2 flex items-start text-white">
-                <span className="text-2xl mt-1">&#8377;</span>2999
+            <div className="h-full rounded-2xl p-8 border border-[#2B2E3B] bg-[#0A0A0A] flex flex-col items-center hover:border-[#9F7CFF] transition-all">
+              <h3 className={`${bebasNeue.className} text-[36px] tracking-wide text-white uppercase mb-2`}>Pro Yearly</h3>
+              <p className={`${roboto.className} text-[#818898] text-[20px] mb-6`}>12 Months</p>
+              <div className={`${bebasNeue.className} text-[48px] text-white flex items-start mb-2`}>
+                <span className="text-[28px] mt-2">&#8377;</span>2999
               </div>
-              <p className="text-primary text-sm font-medium mb-8">&#8377;8.2/day</p>
-              <p className="text-gray-400 text-sm mb-8 flex-grow">Unlimited All Features</p>
-              <button className="w-full py-3 px-6 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-sm font-semibold hover:bg-white/10 transition-colors">
-                Get Early Access
+              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;8.2/day</p>
+              <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
+              <button className={`${roboto.className} w-full py-3 px-6 rounded-xl border border-[#2B2E3B] bg-[#0b0b0f] text-white text-[20px] font-medium hover:bg-[#1a1a24] transition-colors`}>
+                GET EARLY ACCESS
               </button>
             </div>
           </motion.div>
@@ -208,9 +202,9 @@ export default function PricingSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mt-12 text-xs text-gray-500 uppercase tracking-widest"
+          className={`${roboto.className} text-center mt-12 text-[14px] text-[#818898] tracking-widest uppercase`}
         >
-          No hidden charges <span className="mx-2 text-white/20">|</span> Instant activation
+          No hidden charges <span className="mx-2 text-[#2B2E3B]">|</span> Instant activation
         </motion.div>
 
       </div>

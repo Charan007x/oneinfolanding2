@@ -2,12 +2,23 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Bebas_Neue, Roboto } from 'next/font/google';
 import InstagramScene from "./InstagramScene";
 import DMScene from "./DMScene";
 import DashboardScene from "./DashboardScene";
 import ParticleSystem from "./ParticleSystem";
 import IPhoneFrame from "./IPhoneFrame";
 import Navbar from "./Navbar";
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
 
 export default function HeroSection() {
   const [activeScene, setActiveScene] = useState(0);
@@ -61,13 +72,13 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight"
+                className={`${bebasNeue.className} tracking-wide text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] uppercase`}
               >
-                <span className="text-white">Turn Comments into</span>{" "}
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Revenue
-                </span>{" "}
-                <span className="text-white">— Automatically.</span>
+                <span className="text-white">YOUR AI Assistant for </span>
+                <span className="text-[#b48cfa]">
+                  creators
+                </span>
+                <span className="text-white"> and business.</span>
               </motion.h1>
 
               {/* Subtext */}
@@ -75,10 +86,9 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-lg lg:text-xl text-gray-400 leading-relaxed max-w-xl"
+                className={`${roboto.className} text-lg lg:text-xl text-[#818898] leading-relaxed max-w-xl`}
               >
-                AI responds to your audience, shares product links, and drives
-                sales on autopilot.
+                Auto-reply DMs. Schedule content. Land brand deals. Earn affiliate commissions. All on autopilot — so you focus on creating.
               </motion.p>
 
               {/* CTAs */}
@@ -101,9 +111,9 @@ export default function HeroSection() {
                   }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-3 sm:px-8 sm:py-4 bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-primary/25 text-sm sm:text-base flex-1 sm:flex-none"
+                  className={`${roboto.className} px-4 py-3 sm:px-8 sm:py-3 bg-[#9F7CFF] hover:bg-[#9F7CFF]/90 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#9F7CFF]/25 text-base sm:text-lg flex-1 sm:flex-none`}
                 >
-                  Start Automating
+                  TRY FREE FOR 7 DAYS
                   <svg
                     className="w-4 h-4 sm:w-5 sm:h-5 hidden xs:block"
                     fill="none"
@@ -122,7 +132,7 @@ export default function HeroSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-3 sm:px-8 sm:py-4 glass hover:bg-white/10 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2 border border-white/20 text-sm sm:text-base flex-1 sm:flex-none"
+                  className={`${roboto.className} px-4 py-3 sm:px-8 sm:py-3 glass hover:bg-white/10 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 border border-[#2B2E3B] bg-[#0A0A0A] text-base sm:text-lg flex-1 sm:flex-none`}
                 >
                   <svg
                     className="w-4 h-4 sm:w-5 sm:h-5 hidden xs:block"
@@ -143,7 +153,7 @@ export default function HeroSection() {
                       d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  Watch Demo
+                  <span>SEE HOW IT WORKS</span>
                 </motion.button>
               </motion.div>
 

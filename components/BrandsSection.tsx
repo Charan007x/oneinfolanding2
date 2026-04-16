@@ -47,7 +47,7 @@ export default function BrandsSection() {
   };
 
   return (
-    <section className="w-full bg-[#0A0A0A] py-8 md:py-16 px-4 md:px-8">
+    <section id="brands" className="w-full bg-[#0A0A0A] py-8 md:py-16 px-4 md:px-8">
       <div className="max-w-[1240px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
         {/* Left Column */}
         <motion.div
@@ -58,10 +58,11 @@ export default function BrandsSection() {
           className="flex-1 space-y-8 lg:max-w-[500px]"
         >
           <h2 className={`${bebasNeue.className} text-[36px] tracking-wide leading-[1.1] text-white uppercase`}>
-            WE BUILT THIS FOR THEIR BRANDS. WE BUILT IT FOR <span className="text-[#9F7CFF]">YOURS.</span>
+            USED BY SELLERS ACROSS  <span className="text-[#9F7CFF]"> INDIA'S </span> 
+             BIGGEST PLATFORMS
           </h2>
           <p className={`${roboto.className} text-[20px] leading-relaxed text-[#818898]`}>
-            We're trusted by India's biggest brands and creators to power their D2C and social commerce.
+            Sell on Amazon, Flipkart, Myntra, Meesho, Nykaa, or Shopsy? OneInfo connects your content to your catalog and turns followers into buyers.
           </p>
           
           {/* Stats Grid */}

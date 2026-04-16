@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link href="#testimonials" className="hover:text-white transition-colors">Testimonials</Link>
             <Link href="#pricing" className="hover:text-white transition-colors">Pricing</Link>
             <Link href="#about" className="hover:text-white transition-colors">About</Link>
-            <Link href="#faq" className="hover:text-white transition-colors">FAQ</Link>
+            <Link href="#contact" className="bg-[#9F7CFF] text-white px-5 py-2.5 rounded-xl font-medium hover:bg-[#8b65ff] transition-colors">Contact us</Link>
           </div>
 
           {/* Mobile Hamburger Icon */}
@@ -70,7 +70,7 @@ export default function Navbar() {
               <Link href="#testimonials" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white transition-colors text-lg font-medium">Testimonials</Link>
               <Link href="#pricing" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white transition-colors text-lg font-medium">Pricing</Link>
               <Link href="#about" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white transition-colors text-lg font-medium">About</Link>
-              <Link href="#faq" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white transition-colors text-lg font-medium">FAQ</Link>
+              <Link href="#contact" onClick={() => setIsOpen(false)} className="bg-[#9F7CFF] text-white px-6 py-3 rounded-xl text-center text-lg font-medium hover:bg-[#8b65ff] transition-colors mt-2">Contact us</Link>
             </div>
           </motion.div>
         )}

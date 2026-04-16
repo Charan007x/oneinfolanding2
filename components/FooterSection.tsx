@@ -15,7 +15,7 @@ const roboto = Roboto({
 
 export default function FooterSection() {
   return (
-    <footer className="relative bg-[#0A0A0A] pt-16 lg:pt-24 pb-8 z-10 border-t border-white/5">
+    <footer id="contact" className="relative bg-[#0A0A0A] pt-16 lg:pt-24 pb-8 z-10 border-t border-white/5">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex flex-col-reverse lg:flex-row justify-between gap-16 lg:gap-24">
           
@@ -39,13 +39,13 @@ export default function FooterSection() {
 
             {/* Links */}
             <div className={`${roboto.className} flex flex-wrap gap-x-6 gap-y-3 text-[14px] text-gray-400 mb-10`}>
-              <a href="#" className="hover:text-white transition-colors">Features</a>
-              <a href="#" className="hover:text-white transition-colors">Pricing</a>
-              <a href="#" className="hover:text-white transition-colors">Brands</a>
-              <a href="#" className="hover:text-white transition-colors">About</a>
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Refund Policy</a>
+              <a href="/#features" className="hover:text-white transition-colors">Features</a>
+              <a href="/#pricing" className="hover:text-white transition-colors">Pricing</a>
+              <a href="/#brands" className="hover:text-white transition-colors">Brands</a>
+              <a href="/#about" className="hover:text-white transition-colors">About</a>
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="/refund" className="hover:text-white transition-colors">Refund Policy</a>
             </div>
 
             {/* Store Buttons */}

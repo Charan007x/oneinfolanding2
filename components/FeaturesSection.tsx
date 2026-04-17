@@ -116,7 +116,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className={`${roboto.className} text-[20px] text-[#818898] max-w-3xl`}
           >
-            From DMs to deals to dollars — OneInfo runs your business while you create.
+            From DMs to deals to rupees — OneInfo runs your business while you create.
           </motion.p>
         </div>
 

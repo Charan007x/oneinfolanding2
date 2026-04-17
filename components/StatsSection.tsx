@@ -69,7 +69,6 @@ export default function StatsSection() {
             viewport={{ once: true }}
             className="text-sm text-gray-400 uppercase tracking-wider mb-3"
           >
-            Our Impact
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

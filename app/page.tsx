@@ -19,11 +19,15 @@ export default function Home() {
       <FeaturesSection />
       <BrandsSection />
       <TestimonialsSection />
+      <ComparisonSection />
       <PricingSection />
       <AboutSection />
-      <ComparisonSection />
       <FAQSection />
       <FooterSection />
     </main>
   );
 }
+
+
+// hero - trusted brand partners - stats - features -
+//  brands - testimonials - comparism -  pricing - about -faq - footer

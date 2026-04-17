@@ -8,7 +8,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "OneInfo.ai - YOUR AI Assistant for creators and business.",
+  title: "oneinfo.ai",
   description: "AI responds to your audience, shares product links, and drives sales on autopilot.",
 };
 

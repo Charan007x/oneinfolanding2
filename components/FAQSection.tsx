@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "How to generate affiliate link?",
-    answer: "You can generate affiliate links directly through your OneInfo dashboard by navigating to the Partnerships tab and selecting your approved brands.",
+    answer: "Connect products in the affiliate section to create trackable links. Share or auto-send them to boost engagement and earnings.",
   },
   {
     question: "How to withdraw earnings from wallet?",

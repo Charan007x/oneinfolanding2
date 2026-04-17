@@ -19,12 +19,12 @@ export default function DownloadPage() {
     <div className="relative min-h-screen bg-[#0b0b0f] text-white overflow-hidden">
       <Navbar />
       
-      <div className="container mx-auto px-4 h-screen flex flex-col lg:flex-row items-center justify-between gap-12 pt-20">
-        <div className="flex-1 space-y-8 text-center lg:text-left max-w-2xl lg:-mt-10 lg:pl-12 xl:pl-20">
-          <h1 className={`${bebasNeue.className} text-[48px] md:text-[64px] lg:text-[72px] tracking-wide uppercase leading-[1.1]`}>
+      <div className="container mx-auto px-4 h-[100dvh] flex flex-col lg:flex-row items-center justify-start lg:justify-between gap-6 lg:gap-12 pt-16 lg:pt-20 pb-0 overflow-hidden">
+        <div className="space-y-6 text-center lg:text-left max-w-2xl lg:pl-12 xl:pl-20 mx-auto lg:mx-0 flex-shrink-0 z-10 w-full">
+          <h1 className={`${bebasNeue.className} text-[44px] md:text-[64px] lg:text-[72px] tracking-wide uppercase leading-[1.1]`}>
             Get <span className="text-[#9F7CFF]">OneInfo</span> on <br /> your device
           </h1>
-          <p className={`${roboto.className} text-[18px] md:text-[20px] text-[#818898] leading-relaxed`}>
+          <p className={`${roboto.className} text-[16px] md:text-[20px] text-[#818898] leading-relaxed mx-auto lg:mx-0 max-w-[90%] sm:max-w-none`}>
             Download our mobile app to start automating your social media interactions and turn conversations into consistent revenue.
           </p>
           
@@ -57,26 +57,28 @@ export default function DownloadPage() {
           </div>
         </div>
 
-        <div className="flex-1 flex justify-center lg:justify-end w-full lg:-translate-y-8">
-          <IPhoneFrame>
-            <div className="w-full h-full bg-[#0b0b0f] flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-[#9F7CFF]/15 to-transparent pointer-events-none" />
-              
-              <img 
-                src="/logos/oneinfoLOGO.png" 
-                alt="One Info Logo" 
-                className="w-24 h-24 rounded-[1.25rem] shadow-[0_12px_44px_rgba(159,124,255,0.5)] mb-8 z-10"
-              />
-              
-              <h2 className={`${bebasNeue.className} text-[42px] tracking-wide text-white uppercase z-10 mb-2`}>
-                One<span className="text-[#9F7CFF]">Info</span>
-              </h2>
-              
-              <p className={`${roboto.className} text-[16px] leading-relaxed text-[#818898] z-10 px-4`}>
-                The AI Operating System for Creators
-              </p>
-            </div>
-          </IPhoneFrame>
+        <div className="flex-1 flex justify-center items-end lg:items-center w-full mt-2 lg:mt-0 2xl:pb-0 h-full max-h-[55vh] lg:max-h-none lg:pr-12 xl:pr-24">
+          <div className="transform scale-90 sm:scale-100 lg:scale-[0.95] origin-top lg:origin-center translate-y-6 lg:translate-y-0 pb-16 lg:pb-0">
+            <IPhoneFrame>
+              <div className="w-full h-full bg-[#0b0b0f] flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-[#9F7CFF]/15 to-transparent pointer-events-none" />
+                
+                <img 
+                  src="/logos/oneinfoLOGO.png" 
+                  alt="One Info Logo" 
+                  className="w-24 h-24 rounded-[1.25rem] shadow-[0_12px_44px_rgba(159,124,255,0.5)] mb-8 z-10"
+                />
+                
+                <h2 className={`${bebasNeue.className} text-[42px] tracking-wide text-white uppercase z-10 mb-2`}>
+                  One<span className="text-[#9F7CFF]">Info</span>
+                </h2>
+                
+                <p className={`${roboto.className} text-[16px] leading-relaxed text-[#818898] z-10 px-4`}>
+                  The AI Operating System for Creators
+                </p>
+              </div>
+            </IPhoneFrame>
+          </div>
         </div>
       </div>
     </div>

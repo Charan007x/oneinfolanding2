@@ -42,7 +42,7 @@ const FeatureCard = ({
     >
       {soon && (
         <div className="absolute top-6 right-6 border border-[#9F7CFF]/30 text-[#9F7CFF] text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-transparent tracking-widest z-10">
-          Soon
+          Coming Soon
         </div>
       )}
       <div className="w-20 h-20 rounded-xl bg-[#9F7CFF]/10 flex items-center justify-center mb-6 shrink-0 relative z-10">

@@ -54,7 +54,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="space-y-5 lg:space-y-8 z-10 lg:min-h-0 flex flex-col justify-start mt-6 lg:mt-0 lg:justify-center"
+              className="space-y-5 lg:space-y-8 z-10 lg:min-h-0 flex flex-col justify-start mt-6 lg:mt-0 lg:justify-center text-center lg:text-left"
             >
               {/* Badge
               <motion.div
@@ -86,7 +86,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className={`${roboto.className} text-lg lg:text-xl text-[#818898] leading-relaxed max-w-xl`}
+                className={`${roboto.className} text-lg lg:text-xl text-[#818898] leading-relaxed max-w-xl mx-auto lg:mx-0`}
               >
                 Auto-reply DMs. Schedule content. Land brand deals. Earn affiliate commissions. All on autopilot — so you focus on creating.
               </motion.p>
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-row gap-3 sm:gap-4"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
               >
                 <motion.button
                   onClick={() => {
@@ -130,6 +130,7 @@ export default function HeroSection() {
                 </motion.button>
 
                 <motion.button
+                  onClick={() => window.open("https://www.youtube.com/@joinoneinfo", "_blank")}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`${roboto.className} px-4 py-3 sm:px-8 sm:py-3 glass hover:bg-white/10 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 border border-[#2B2E3B] bg-[#0A0A0A] text-base sm:text-lg flex-1 sm:flex-none`}
@@ -162,7 +163,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="hidden lg:flex items-center gap-3 pt-8"
+                className="hidden lg:flex items-center justify-center lg:justify-start gap-3 pt-8"
               >
                 <div className="flex items-center gap-2">
                   {[0, 1, 2].map((index) => (

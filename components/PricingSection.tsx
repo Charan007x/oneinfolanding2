@@ -59,6 +59,17 @@ export default function PricingSection() {
     )
   }));
 
+  const handlePricingClick = () => {
+    const userAgent = navigator.userAgent || navigator.vendor;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+      window.location.href = "https://apps.apple.com/in/app/oneinfo-ai-assistant/id6517354494";
+    } else if (/android/i.test(userAgent)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.gadgetspidy.oneinfo";
+    } else {
+      window.location.href = "/download";
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -163,7 +174,7 @@ export default function PricingSection() {
               </div>
               <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;11.6/day</p>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
-              <button className={`${roboto.className} w-full py-3 px-6 rounded-xl border border-[#2B2E3B] bg-[#0b0b0f] text-white text-[20px] font-medium hover:bg-[#1a1a24] transition-colors`}>
+              <button onClick={handlePricingClick} className={`${roboto.className} w-full py-3 px-6 rounded-xl border border-[#2B2E3B] bg-[#0b0b0f] text-white text-[20px] font-medium hover:bg-[#1a1a24] transition-colors`}>
                 START FREE TRIAL
               </button>
             </div>
@@ -182,7 +193,7 @@ export default function PricingSection() {
               </div>
               <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;8.9/day</p>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
-              <button className={`${roboto.className} w-full py-3 px-6 rounded-xl bg-[#9F7CFF] text-white text-[20px] font-medium hover:opacity-90 transition-opacity shadow-lg`}>
+              <button onClick={handlePricingClick} className={`${roboto.className} w-full py-3 px-6 rounded-xl bg-[#9F7CFF] text-white text-[20px] font-medium hover:opacity-90 transition-opacity shadow-lg`}>
                 GET EARLY ACCESS
               </button>
             </div>
@@ -198,7 +209,7 @@ export default function PricingSection() {
               </div>
               <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;9.6/day</p>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
-              <button className={`${roboto.className} w-full py-3 px-6 rounded-xl border border-[#2B2E3B] bg-[#0b0b0f] text-white text-[20px] font-medium hover:bg-[#1a1a24] transition-colors`}>
+              <button onClick={handlePricingClick} className={`${roboto.className} w-full py-3 px-6 rounded-xl border border-[#2B2E3B] bg-[#0b0b0f] text-white text-[20px] font-medium hover:bg-[#1a1a24] transition-colors`}>
                 GET EARLY ACCESS
               </button>
             </div>

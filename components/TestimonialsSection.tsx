@@ -441,7 +441,7 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="relative py-8 lg:py-10 overflow-hidden">
       <div className="container mx-auto relative z-10 px-0 md:px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 flex flex-col justify-center items-center">
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -449,17 +449,25 @@ export default function TestimonialsSection() {
             viewport={{ once: true }}
             className="text-sm text-gray-400 uppercase tracking-wider mb-3"
           >
-            Creator Stories
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className={`text-[36px] font-bold text-white relative flex items-center justify-center gap-2 ${bebasNeue.className}`}
+            className={`${bebasNeue.className} text-[30px] md:text-[36px] tracking-wide text-white relative flex items-center justify-center gap-2 mb-4 uppercase`}
           >
-           Loved By <span className="text-[#a855f7] bg-clip-text">Creators</span>
+           REAL <span className="text-[#a855f7] bg-clip-text">CREATORS.</span> REAL <span className="text-[#a855f7] bg-clip-text">RESULTS.</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className={`${roboto.className} text-[20px] leading-relaxed text-[#818898] max-w-3xl`}
+          >
+            From 100K to 1M+ followers — creators across every niche earn more and work less with OneInfo.
+          </motion.p>
         </div>
 
         {/* Mobile View: Manually scrollable track */}

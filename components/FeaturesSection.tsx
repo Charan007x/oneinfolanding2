@@ -161,7 +161,7 @@ export default function FeaturesSection() {
           <FeatureCard
             variants={itemVariants}
             title="AFFILIATED STORE"
-            description="Earn commissions by connecting with top affiliated brands seamlessly."
+            description="132 brands. Your own storefront. Commissions auto-tracked every sale."
             icon="/icons/store.svg"
             className="md:col-span-1 min-h-[220px]"
           />

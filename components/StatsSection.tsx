@@ -78,8 +78,8 @@ export default function StatsSection() {
             viewport={{ once: true }}
             className={`${bebasNeue.className} text-[30px] md:text-[36px] tracking-wide text-center uppercase`}
           >
-            <span className="text-white">Growing By The </span>
-            <span className="text-[#b48cfa]">Numbers</span>
+            <span className="text-white">Trusted by </span>
+            <span className="text-[#b48cfa]">Creators </span>Across India.
           </motion.h2>
         </div>
 

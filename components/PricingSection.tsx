@@ -95,9 +95,18 @@ export default function PricingSection() {
             viewport={{ once: true }}
             className={`${bebasNeue.className} text-[30px] md:text-[36px] tracking-wide text-center`}
           >
-            <span className="text-white uppercase">Monetize Your Audience. </span>
-            <span className="text-[#9F7CFF] uppercase">Scale Without Limits.</span>
+            <span className="text-white uppercase">Simple pricing. </span>
+            <span className="text-[#9F7CFF] uppercase">Serious results.</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className={`${roboto.className} text-[16px] md:text-[20px] leading-relaxed text-[#818898] max-w-2xl mt-4`}
+          >
+            Under ₹10/day. Full access. No hidden fees.
+          </motion.p>
         </div>
 
         {/* Features Scroll */}
@@ -150,9 +159,9 @@ export default function PricingSection() {
               <h3 className={`${bebasNeue.className} text-[36px] tracking-wide text-white uppercase mb-2`}>Starter</h3>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-6`}>1 Month</p>
               <div className={`${bebasNeue.className} text-[48px] text-white flex items-start mb-2`}>
-                <span className="text-[28px] mt-2">&#8377;</span>299
+                <span className="text-[28px] mt-2">&#8377;</span>349
               </div>
-              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;10/day</p>
+              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;11.6/day</p>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
               <button className={`${roboto.className} w-full py-3 px-6 rounded-xl border border-[#2B2E3B] bg-[#0b0b0f] text-white text-[20px] font-medium hover:bg-[#1a1a24] transition-colors`}>
                 START FREE TRIAL
@@ -169,9 +178,9 @@ export default function PricingSection() {
               <h3 className={`${bebasNeue.className} text-[36px] tracking-wide text-[#9F7CFF] uppercase mb-2 mt-2`}>Growth</h3>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-6`}>3 Months</p>
               <div className={`${bebasNeue.className} text-[48px] text-white flex items-start mb-2`}>
-                <span className="text-[28px] mt-2">&#8377;</span>599
+                <span className="text-[28px] mt-2">&#8377;</span>799
               </div>
-              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;6.7/day</p>
+              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;8.9/day</p>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
               <button className={`${roboto.className} w-full py-3 px-6 rounded-xl bg-[#9F7CFF] text-white text-[20px] font-medium hover:opacity-90 transition-opacity shadow-lg`}>
                 GET EARLY ACCESS
@@ -185,9 +194,9 @@ export default function PricingSection() {
               <h3 className={`${bebasNeue.className} text-[36px] tracking-wide text-white uppercase mb-2`}>Pro Yearly</h3>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-6`}>12 Months</p>
               <div className={`${bebasNeue.className} text-[48px] text-white flex items-start mb-2`}>
-                <span className="text-[28px] mt-2">&#8377;</span>2999
+                <span className="text-[28px] mt-2">&#8377;</span>3499
               </div>
-              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;8.2/day</p>
+              <p className={`${roboto.className} text-[#9F7CFF] text-[20px] mb-8`}>&#8377;9.6/day</p>
               <p className={`${roboto.className} text-[#818898] text-[20px] mb-8 flex-grow`}>Unlimited All Features</p>
               <button className={`${roboto.className} w-full py-3 px-6 rounded-xl border border-[#2B2E3B] bg-[#0b0b0f] text-white text-[20px] font-medium hover:bg-[#1a1a24] transition-colors`}>
                 GET EARLY ACCESS

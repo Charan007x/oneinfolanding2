@@ -58,11 +58,11 @@ export default function BrandsSection() {
           className="flex-1 space-y-8 lg:max-w-[500px]"
         >
           <h2 className={`${bebasNeue.className} text-[36px] tracking-wide leading-[1.1] text-white uppercase`}>
-            USED BY SELLERS ACROSS  <span className="text-[#9F7CFF]"> INDIA'S </span> 
-             BIGGEST PLATFORMS
+            132 BRANDS. One StoreFront. <span className="text-[#9F7CFF]"> YOURS </span> 
           </h2>
           <p className={`${roboto.className} text-[20px] leading-relaxed text-[#818898]`}>
-            Sell on Amazon, Flipkart, Myntra, Meesho, Nykaa, or Shopsy? OneInfo connects your content to your catalog and turns followers into buyers.
+            Browse top brands across fashion, beauty, tech, and lifestyle. Promote what you
+love. Earn commissions automatically.
           </p>
           
           {/* Stats Grid */}

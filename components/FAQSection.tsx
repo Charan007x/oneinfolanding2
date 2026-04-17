@@ -55,7 +55,7 @@ export default function FAQSection() {
             viewport={{ once: true }}
             className="text-sm text-gray-400 uppercase tracking-wider mb-3"
           >
-            Got Questions?
+            
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -64,8 +64,8 @@ export default function FAQSection() {
             viewport={{ once: true }}
             className={`${bebasNeue.className} text-[30px] md:text-[36px] tracking-wide text-center uppercase`}
           >
-            <span className="text-white">Frequently </span>
-            <span className="text-[#b48cfa]">Asked Questions</span>
+            <span className="text-white">Everything you need to </span>
+            <span className="text-[#b48cfa]">KNOW.</span>
           </motion.h2>
         </div>
 
@@ -85,7 +85,7 @@ export default function FAQSection() {
                   onClick={() => toggleOpen(index)}
                   className="w-full flex items-center justify-between py-6 text-left focus:outline-none group"
                 >
-                  <span className={`${roboto.className} text-[#E4E4E6] text-[16px] lg:text-[18px] font-medium group-hover:text-white transition-colors duration-200`}>
+                  <span className={`${bebasNeue.className} tracking-wide text-[#E4E4E6] text-[20px] lg:text-[20px] uppercase group-hover:text-white transition-colors duration-200`}>
                     {faq.question}
                   </span>
                   <div 

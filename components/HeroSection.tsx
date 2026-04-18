@@ -74,11 +74,11 @@ export default function HeroSection() {
                 transition={{ delay: 0.3 }}
                 className={`${bebasNeue.className} tracking-wide text-4xl sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[1.1] uppercase`}
               >
-                <span className="text-white">The Only AI Built to Monetize Your Following </span>
-                {/* <span className="text-[#b48cfa]">
-                  creators
-                </span> */}
-                <span className="text-white"> and business.</span>
+                <span className="text-white">The Only AI Built to </span> 
+                <span className="text-[#b48cfa]">
+                  Monetize
+                </span> Your Following
+                {/* <span className="text-white"> and business.</span> */}
               </motion.h1>
 
               {/* Subtext */}

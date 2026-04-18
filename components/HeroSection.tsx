@@ -42,19 +42,19 @@ export default function HeroSection() {
   }, [activeScene]);
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen lg:h-screen lg:max-h-screen flex flex-col lg:overflow-hidden">
       <Navbar />
-    <div className="relative min-h-screen w-full flex flex-col pt-20 lg:pt-24 pb-12 lg:pb-0 overflow-hidden">
+    <div className="relative flex-1 min-h-0 w-full flex flex-col pt-20 lg:pt-24 pb-8 lg:pb-0 overflow-hidden">
       <ParticleSystem />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row items-center justify-center flex-1 py-8 lg:py-0">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-7xl mx-auto flex-1">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex-1 min-h-0 flex flex-col lg:flex-row items-center justify-center py-4 lg:py-0">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 items-center w-full max-w-7xl mx-auto flex-1 min-h-0">
             {/* Left Side - Copy */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="space-y-4 lg:space-y-6 z-10 flex flex-col justify-center text-center lg:text-left mt-4 lg:mt-0 pb-4 lg:pb-0"
+              className="space-y-4 lg:space-y-6 z-10 flex flex-col justify-center text-center lg:text-left mt-4 lg:mt-0 pb-4 lg:pb-0 self-center"
             >
               {/* Badge
               <motion.div
@@ -186,16 +186,26 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Right Side - iPhone with Visual Flow */}
-            <div className="relative z-10 flex items-center justify-center mt-8 lg:mt-0 w-full h-[450px] lg:h-auto min-h-[450px] shrink-0">
+            <div className="relative z-10 flex items-center justify-center mt-4 lg:mt-0 w-full h-[450px] lg:h-full lg:min-h-[500px] shrink-0">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, x: 50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="w-full flex justify-center items-center"
+                className="w-full h-full relative"
               >
-                {/* This div uses CSS scale to visually shrink the phone while maintaining document flow */}
-                <div className="flex justify-center items-center origin-center scale-[0.65] sm:scale-[0.70] md:scale-[0.75] lg:scale-[0.70] xl:scale-[0.80] 2xl:scale-[0.90] h-[650px]">
+                {/* 
+                  Positioning the scaler absolutely decouples its rigid 650px height 
+                  from the Grid height computation, ensuring it literally cannot clip 
+                  or force the parent section to overflow its 100dvh bounds.
+                */}
+                <div 
+                  className="absolute top-1/2 left-1/2 !-translate-x-1/2 !-translate-y-1/2 w-[320px] h-[650px]"
+                  style={{
+                    transform: "translate(-50%, -50%) scale(clamp(0.6, calc(100vh / 900), 1))",
+                    transformOrigin: "center center"
+                  }}
+                >
                   <IPhoneFrame>
                 <AnimatePresence mode="wait">
                   {/* Scene 1: Instagram Post */}

@@ -54,7 +54,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="space-y-5 lg:space-y-8 z-10 lg:min-h-0 flex flex-col justify-start mt-6 lg:mt-0 lg:justify-center text-center lg:text-left"
+              className="space-y-5 lg:space-y-8 [@media(max-height:800px)]:lg:space-y-5 z-10 lg:min-h-0 flex flex-col justify-start mt-6 lg:mt-0 lg:justify-center text-center lg:text-left"
             >
               {/* Badge
               <motion.div
@@ -72,7 +72,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className={`${bebasNeue.className} tracking-wide text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] uppercase`}
+                className={`${bebasNeue.className} tracking-wide text-5xl sm:text-6xl lg:text-7xl xl:text-8xl [@media(max-height:800px)]:lg:text-6xl [@media(max-height:800px)]:xl:text-7xl leading-[1.1] uppercase`}
               >
                 <span className="text-white">The Only AI Built to </span>
                 <span className="text-[#b48cfa]">
@@ -85,7 +85,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className={`${roboto.className} text-lg lg:text-xl text-[#818898] leading-relaxed max-w-xl mx-auto lg:mx-0`}
+                className={`${roboto.className} text-lg lg:text-xl [@media(max-height:800px)]:lg:text-lg text-[#818898] leading-relaxed max-w-xl mx-auto lg:mx-0`}
               >
                 Auto-reply DMs. Schedule content. Land brand deals. Earn affiliate commissions. All on autopilot — so you focus on creating.
               </motion.p>
@@ -110,7 +110,7 @@ export default function HeroSection() {
                   }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`${roboto.className} px-4 py-3 sm:px-8 sm:py-3 bg-[#9F7CFF] hover:bg-[#9F7CFF]/90 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#9F7CFF]/25 text-base sm:text-lg flex-1 sm:flex-none`}
+                  className={`${roboto.className} px-4 py-3 sm:px-8 sm:py-3 [@media(max-height:800px)]:sm:py-2.5 bg-[#9F7CFF] hover:bg-[#9F7CFF]/90 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#9F7CFF]/25 text-base sm:text-lg [@media(max-height:800px)]:sm:text-base flex-1 sm:flex-none`}
                 >
                   TRY FREE FOR 7 DAYS
                   <svg
@@ -132,7 +132,7 @@ export default function HeroSection() {
                   onClick={() => window.open("https://www.youtube.com/@joinoneinfo", "_blank")}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`${roboto.className} px-4 py-3 sm:px-8 sm:py-3 glass hover:bg-white/10 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 border border-[#2B2E3B] bg-[#0A0A0A] text-base sm:text-lg flex-1 sm:flex-none`}
+                  className={`${roboto.className} px-4 py-3 sm:px-8 sm:py-3 [@media(max-height:800px)]:sm:py-2.5 glass hover:bg-white/10 text-white font-medium rounded-xl transition-colors flex items-center justify-center gap-2 border border-[#2B2E3B] bg-[#0A0A0A] text-base sm:text-lg [@media(max-height:800px)]:sm:text-base flex-1 sm:flex-none`}
                 >
                   <svg
                     className="w-4 h-4 sm:w-5 sm:h-5 hidden xs:block"
@@ -185,14 +185,14 @@ export default function HeroSection() {
 
             {/* Right Side - iPhone with Visual Flow */}
             <div className="relative z-10 flex items-center justify-center mt-6 lg:mt-0 pb-16 lg:pb-0">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="transform scale-[0.68] lg:scale-[0.28] xl:scale-[0.32] origin-top lg:origin-center"
-              >
-                <IPhoneFrame>
+              <div className="transform scale-[0.75] sm:scale-[0.85] lg:scale-[0.8] xl:scale-100 2xl:scale-105 [@media(max-height:900px)]:!scale-[0.85] [@media(max-height:800px)]:!scale-[0.75] [@media(max-height:700px)]:!scale-[0.65] origin-top lg:origin-center transition-transform duration-300">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                  whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                >
+                  <IPhoneFrame>
                   <AnimatePresence mode="wait">
                     {/* Scene 1: Instagram Post */}
                     {activeScene === 0 && (
@@ -237,7 +237,8 @@ export default function HeroSection() {
                     )}
                   </AnimatePresence>
                 </IPhoneFrame>
-              </motion.div>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>

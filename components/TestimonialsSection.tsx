@@ -19,8 +19,8 @@ const mobileTestimonials = [
     imageClassName: "scale-[1.35]",
     ratingText: "4.9/5 • 10K+ CUSTOMERS",
     description: <>I share reels growth templates &amp;<br/>monetization tools that actually help you<br/>grow and earn.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/azhar_edutok"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "OneInfo.ai took over my entire workflow. Content, DMs, sales — everything runs on autopilot now.",
@@ -31,8 +31,8 @@ const mobileTestimonials = [
     imageClassName: "scale-[1.15] translate-y-2",
     ratingText: "4.8/5 • 5K+ CUSTOMERS",
     description: <>Editing assets, presets &amp; bundles<br/>to take your content creation<br/>to the next level.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/pavanedition"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "My DMs turned into a sales machine. OneInfo handles conversations better than I did.",
@@ -43,8 +43,8 @@ const mobileTestimonials = [
     imageClassName: "scale-[1.85] -translate-x-2",
     ratingText: "5.0/5 • 2K+ CUSTOMERS",
     description: <>Fashion hauls, exclusive styling tips &amp;<br/>my personal wardrobe collection<br/>curated just for you.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/muddhugumma_"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "I went from managing everything manually to letting OneInfo handle it all. Growth feels effortless now.",
@@ -55,8 +55,8 @@ const mobileTestimonials = [
     imageClassName: "scale-[1.45] translate-y-4",
     ratingText: "4.9/5 • 8K+ CUSTOMERS",
     description: <>Tech guides, productivity hacks &amp;<br/>exclusive cheat sheets to master<br/>your digital life.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/techboydeepak"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "I stopped losing leads. OneInfo captures and converts everything automatically.",
@@ -67,8 +67,8 @@ const mobileTestimonials = [
     imageClassName: "scale-[1.85]",
     ratingText: "4.9/5 • 7K+ CUSTOMERS",
     description: <>Acting workshops, audition monologues &amp;<br/>insider tips to make it big<br/>in the industry.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/actorguru"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   }
 ];
 
@@ -134,8 +134,8 @@ const webTestimonials = [
     description: <>I share reels growth templates &
 monetization tools that actually help you
 grow and earn.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://google.com" // Replace with actual link
+    buttonText: "DOWNLOAD",
+    link: "/download" // Replace with actual link
   },
   {
     quote: "OneInfo.ai took over my entire workflow. Content, DMs, sales — everything runs on autopilot now.",
@@ -146,8 +146,8 @@ grow and earn.</>,
     imageClassName: "scale-[9.15] -translate-y-28",
     ratingText: "4.8/5 • 5K+ CUSTOMERS",
     description: <>You’ll probably find something you didn’t know you needed.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/pavanedition"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "My DMs turned into a sales machine. OneInfo handles conversations better than I did.",
@@ -158,8 +158,8 @@ grow and earn.</>,
     imageClassName: "scale-[20] -translate-y-24 translate-x-4",
     ratingText: "5.0/5 • 2K+ CUSTOMERS",
     description: <>I’ve linked some beauty finds, lifestyle picks & everyday essentials I genuinely love… have a look.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/muddhugumma_"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "I went from managing everything manually to letting OneInfo handle it all. Growth feels effortless now.",
@@ -170,8 +170,8 @@ grow and earn.</>,
     imageClassName: "scale-[10.45] -translate-y-24",
     ratingText: "4.9/5 • 8K+ CUSTOMERS",
     description: <>Smart gadgets, tech tools & everyday upgrades I use… worth checking out.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/techboydeepak"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "I stopped losing leads. OneInfo captures and converts everything automatically.",
@@ -183,8 +183,8 @@ grow and earn.</>,
     imageClassName: "scale-[15.85] -translate-y-28 translate-x-4",
     ratingText: "4.9/5 • 7K+ CUSTOMERS",
     description: <>Useful gadgets, smart finds & everyday essentials I’ve been using… have a look.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/actorguru"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   
   // Bottom Row (5 New Unique Items)
@@ -198,8 +198,8 @@ grow and earn.</>,
     imageClassName: "scale-[12.10] translate-y-[-110px]",
     ratingText: "5.0/5 • 15K+ CUSTOMERS",
     description: <>I share tech tools & deals that actually help you save and grow.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/mindset_ma"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "Didn’t think automation would make this big of a difference, but it actually boosted my earnings and saved me hours daily.",
@@ -211,8 +211,8 @@ grow and earn.</>,
     imageClassName: "scale-[10.2] -translate-y-28",
     ratingText: "4.9/5 • 20K+ CUSTOMERS",
     description: <>I share easy makeup tips & honest product picks.<br/>automatically.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/fitnessfanatic"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "The easiest ROI I've ever seen on a software tool for my creator business.",
@@ -223,8 +223,8 @@ grow and earn.</>,
     imageClassName: "scale-[16.75] -translate-y-24",
     ratingText: "4.8/5 • 4K+ CUSTOMERS",
     description: <>I share easy-to-understand learning content & concepts.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/crypto_charlie"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "OneInfo paid for itself in exactly 3 hours. Best decision of my career.",
@@ -235,8 +235,8 @@ grow and earn.</>,
     imageClassName: "scale-[12.3] -translate-y-24 -translate-x-4",
     ratingText: "5.0/5 • 12K+ CUSTOMERS",
     description: <>I share tech tips, tricks & products worth using.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/business_baron"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   },
   {
     quote: "I save 4 hours a day and make 3x more sales. The math is a no brainer.",
@@ -248,8 +248,8 @@ grow and earn.</>,
     imageClassName: "scale-[12.8] -translate-y-24",
     ratingText: "4.9/5 • 3K+ CUSTOMERS",
     description: <>I share curated fashion tips, outfit ideas & shoppable finds.</>,
-    buttonText: "VISIT ONESHOP",
-    link: "https://oneshop.vip/design.diana"
+    buttonText: "DOWNLOAD",
+    link: "/download"
   }
 ];
 
@@ -406,7 +406,7 @@ const DesktopTestimonialCard = ({ testimonial }: { testimonial: any }) => (
           {/* Button */}
           <a href={testimonial.link || "#"} target="_blank" rel="noopener noreferrer" className="relative z-50 w-full bg-[#925EF1] py-3.5 rounded-full flex justify-center items-center hover:bg-[#804EE1] transition-colors mb-2 cursor-pointer pointer-events-auto">
             <span className="text-white text-[15px] font-bold font-sans tracking-[0.15em] uppercase">
-              {testimonial.buttonText || "VISIT ONESHOP"}
+              {testimonial.buttonText || "DOWNLOAD"}
             </span>
           </a>
           

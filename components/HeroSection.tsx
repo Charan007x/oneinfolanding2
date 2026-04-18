@@ -74,11 +74,10 @@ export default function HeroSection() {
                 transition={{ delay: 0.3 }}
                 className={`${bebasNeue.className} tracking-wide text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] uppercase`}
               >
-                <span className="text-white">YOUR AI Assistant for </span>
+                <span className="text-white">The Only AI Built to </span>
                 <span className="text-[#b48cfa]">
-                  creators
-                </span>
-                <span className="text-white"> and business.</span>
+                  monetize 
+                </span> your following
               </motion.h1>
 
               {/* Subtext */}
@@ -192,7 +191,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="transform scale-[0.85] lg:scale-[0.35] xl:scale-[0.40] origin-top lg:origin-center"
+                className="transform scale-[0.55] lg:scale-[0.20] xl:scale-[0.20] origin-top lg:origin-center"
               >
                 <IPhoneFrame>
                 <AnimatePresence mode="wait">

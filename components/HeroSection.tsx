@@ -44,17 +44,17 @@ export default function HeroSection() {
   return (
     <div className="relative min-h-screen">
       <Navbar />
-    <div className="relative min-h-screen lg:h-screen w-full overflow-x-hidden lg:overflow-visible flex flex-col pt-20 lg:pt-24">
+    <div className="relative min-h-screen w-full flex flex-col pt-20 lg:pt-24 pb-12 lg:pb-0 overflow-hidden">
       <ParticleSystem />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row items-center lg:items-center justify-start lg:justify-center flex-1">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center w-full max-w-7xl mx-auto pb-10 lg:pb-0 pt-4 lg:pt-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row items-center justify-center flex-1 py-8 lg:py-0">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-7xl mx-auto flex-1">
             {/* Left Side - Copy */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="space-y-5 lg:space-y-8 z-10 lg:min-h-0 flex flex-col justify-start mt-6 lg:mt-0 lg:justify-center text-center lg:text-left"
+              className="space-y-4 lg:space-y-6 z-10 flex flex-col justify-center text-center lg:text-left mt-4 lg:mt-0 pb-4 lg:pb-0"
             >
               {/* Badge
               <motion.div
@@ -72,12 +72,12 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className={`${bebasNeue.className} tracking-wide text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] uppercase`}
+                className={`${bebasNeue.className} tracking-wide text-4xl sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[1.1] uppercase`}
               >
-                <span className="text-white">YOUR AI Assistant for </span>
-                <span className="text-[#b48cfa]">
+                <span className="text-white">The Only AI Built to Monetize Your Following </span>
+                {/* <span className="text-[#b48cfa]">
                   creators
-                </span>
+                </span> */}
                 <span className="text-white"> and business.</span>
               </motion.h1>
 
@@ -86,7 +86,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className={`${roboto.className} text-lg lg:text-xl text-[#818898] leading-relaxed max-w-xl mx-auto lg:mx-0`}
+                className={`${roboto.className} text-base lg:text-lg text-[#818898] leading-relaxed max-w-xl mx-auto lg:mx-0`}
               >
                 Auto-reply DMs. Schedule content. Land brand deals. Earn affiliate commissions. All on autopilot — so you focus on creating.
               </motion.p>
@@ -186,15 +186,17 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Right Side - iPhone with Visual Flow */}
-            <div className="relative z-10 flex items-center justify-center mt-6 lg:mt-0 pb-16 lg:pb-0">
+            <div className="relative z-10 flex items-center justify-center mt-8 lg:mt-0 w-full h-[450px] lg:h-auto min-h-[450px] shrink-0">
               <motion.div
-                initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                initial={{ opacity: 0, scale: 0.8, x: 50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="transform scale-[0.85] lg:scale-[0.35] xl:scale-[0.40] origin-top lg:origin-center"
+                className="w-full flex justify-center items-center"
               >
-                <IPhoneFrame>
+                {/* This div uses CSS scale to visually shrink the phone while maintaining document flow */}
+                <div className="flex justify-center items-center origin-center scale-[0.65] sm:scale-[0.70] md:scale-[0.75] lg:scale-[0.70] xl:scale-[0.80] 2xl:scale-[0.90] h-[650px]">
+                  <IPhoneFrame>
                 <AnimatePresence mode="wait">
                   {/* Scene 1: Instagram Post */}
                   {activeScene === 0 && (
@@ -239,6 +241,7 @@ export default function HeroSection() {
                   )}
                 </AnimatePresence>
               </IPhoneFrame>
+                </div>
               </motion.div>
             </div>
           </div>

@@ -125,7 +125,7 @@ export default function FooterSection() {
                 CONTACT <span className="text-[#9F7CFF]">US</span>
               </h2>
 
-              <form className={`${roboto.className} space-y-6`} action="https://formspree.io/f/mqewqeed" method="POST"> 
+              <form className={`${roboto.className} space-y-6`} action="https://formspree.io/f/xzdyrqbl" method="POST"> {/* Formspree endpoint for handling form submissions */}
                 <div>
                   <label className="block text-[12px] font-semibold text-[#818898] uppercase tracking-widest mb-2">
                     Your Name

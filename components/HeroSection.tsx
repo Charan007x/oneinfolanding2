@@ -44,11 +44,11 @@ export default function HeroSection() {
   return (
     <div className="relative min-h-screen">
       <Navbar />
-    <div className="relative min-h-screen lg:h-screen w-full overflow-x-hidden lg:overflow-visible flex flex-col pt-20 lg:pt-24">
-      <ParticleSystem />
+      <div className="relative min-h-screen lg:h-screen w-full overflow-x-hidden lg:overflow-visible flex flex-col pt-20 lg:pt-24">
+        <ParticleSystem />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row items-center lg:items-center justify-start lg:justify-center flex-1">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center w-full max-w-7xl mx-auto pb-10 lg:pb-0 pt-4 lg:pt-0">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row items-center lg:items-center justify-start lg:justify-center flex-1">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center w-full max-w-7xl mx-auto pb-10 lg:pb-0 pt-4 lg:pt-0">
             {/* Left Side - Copy */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -76,7 +76,7 @@ export default function HeroSection() {
               >
                 <span className="text-white">The Only AI Built to </span>
                 <span className="text-[#b48cfa]">
-                  monetize 
+                  monetize
                 </span> your following
               </motion.h1>
 
@@ -168,11 +168,10 @@ export default function HeroSection() {
                   {[0, 1, 2].map((index) => (
                     <div
                       key={index}
-                      className={`h-1 rounded-full transition-all duration-500 ${
-                        index === activeScene
-                          ? "w-12 bg-primary"
-                          : "w-6 bg-gray-600"
-                      }`}
+                      className={`h-1 rounded-full transition-all duration-500 ${index === activeScene
+                        ? "w-12 bg-primary"
+                        : "w-6 bg-gray-600"
+                        }`}
                     />
                   ))}
                 </div>
@@ -191,53 +190,53 @@ export default function HeroSection() {
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="transform scale-[0.55] lg:scale-[0.20] xl:scale-[0.20] origin-top lg:origin-center"
+                className="transform scale-[0.68] lg:scale-[0.28] xl:scale-[0.32] origin-top lg:origin-center"
               >
                 <IPhoneFrame>
-                <AnimatePresence mode="wait">
-                  {/* Scene 1: Instagram Post */}
-                  {activeScene === 0 && (
-                    <motion.div
-                      key="instagram"
-                      initial={{ x: "100%" }}
-                      animate={{ x: 0 }}
-                      exit={{ x: "-100%" }}
-                      transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-                      className="absolute inset-0"
-                    >
-                      <InstagramScene />
-                    </motion.div>
-                  )}
+                  <AnimatePresence mode="wait">
+                    {/* Scene 1: Instagram Post */}
+                    {activeScene === 0 && (
+                      <motion.div
+                        key="instagram"
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "-100%" }}
+                        transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+                        className="absolute inset-0"
+                      >
+                        <InstagramScene />
+                      </motion.div>
+                    )}
 
-                  {/* Scene 2: DM Interface */}
-                  {activeScene === 1 && (
-                    <motion.div
-                      key="dm"
-                      initial={{ x: "100%" }}
-                      animate={{ x: 0 }}
-                      exit={{ x: "-100%" }}
-                      transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-                      className="absolute inset-0"
-                    >
-                      <DMScene />
-                    </motion.div>
-                  )}
+                    {/* Scene 2: DM Interface */}
+                    {activeScene === 1 && (
+                      <motion.div
+                        key="dm"
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "-100%" }}
+                        transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+                        className="absolute inset-0"
+                      >
+                        <DMScene />
+                      </motion.div>
+                    )}
 
-                  {/* Scene 3: Dashboard */}
-                  {activeScene === 2 && (
-                    <motion.div
-                      key="dashboard"
-                      initial={{ x: "100%" }}
-                      animate={{ x: 0 }}
-                      exit={{ x: "-100%" }}
-                      transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-                      className="absolute inset-0"
-                    >
-                      <DashboardScene />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </IPhoneFrame>
+                    {/* Scene 3: Dashboard */}
+                    {activeScene === 2 && (
+                      <motion.div
+                        key="dashboard"
+                        initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "-100%" }}
+                        transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+                        className="absolute inset-0"
+                      >
+                        <DashboardScene />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </IPhoneFrame>
               </motion.div>
             </div>
           </div>
